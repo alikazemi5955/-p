@@ -1,0 +1,80 @@
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --app-header-height: 120px;
+  }
+
+  body {
+    font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: #ffffff;
+    color: #0f172a;
+  }
+}
+
+/* Scoped layout & desktop profile styles matching runtime */
+#puzzlekala-user-profile-page {
+  width: 100% !important;
+  max-width: 80rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (min-width: 1024px) {
+  #puzzlekala-user-profile-page .account-desk-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* Glass navigation shelf */
+.ios-3d-glass-shelf {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Dedicated Admin Sidebar Scrollbar */
+.admin-sidebar-scroll {
+  overflow-y: scroll !important;
+  overscroll-behavior: contain !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: #10b981 #f1f5f9 !important;
+}
+.admin-sidebar-scroll::-webkit-scrollbar {
+  display: block !important;
+  width: 8px !important;
+  height: 8px !important;
+}
+.admin-sidebar-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9 !important;
+  border-radius: 9999px !important;
+  margin: 4px 0 !important;
+}
+.admin-sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #10b981 !important;
+  border-radius: 9999px !important;
+  border: 1.5px solid #f1f5f9 !important;
+}
+.admin-sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #059669 !important;
+}
+.admin-sidebar-scroll::-webkit-scrollbar-thumb:active {
+  background: #047857 !important;
+}
